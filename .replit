@@ -1,0 +1,9 @@
+compile = "moonc src && raylua_e src/"
+run = [ "./src/_out" ]
+
+entrypoint = "src/main.moon"
+hidden = [ "**/*_out", "**/*.lua" ]
+
+[nix]
+# GLX errors when using newer channels
+channel = "stable-21_11"
